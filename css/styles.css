@@ -5,42 +5,66 @@
 { 
   box-sizing: border-box;
   }
+  h1,h2,h3,h4,h5,h6,p,ol,ul,li{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+  ol,ul{
+    list-style: none;
+  }
+  
+  img{
+    display: block;
+  }
+  section{
+    padding: 120px 0;
+  }
 
 body{
     background-color: #ffffff;
     font-family: "Roboto", sans-serif;
     color: #434455;
-    width: 1440px;
     height:3300px;
   }
 
-  .container-header{
+  .container {
     width: 1158px;
-    display: flex;
+    max-width: 1440px;
     align-items: center;
-    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 15px;
     
   }
 
-  .logo{
-    display: flex;
-    text-align: center;
+  header{
+    height: 72px;
+    border-bottom:1px solid #e7e9fc;
+    gap: 30px;
   }
-  .page-menu-list{
+  .container-header{
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1158px;
+
+
   }
+.container .page-menu-list{
+  display: flex;
+  gap: 40px;
+}
 
-  .address{
-    display: flex;
-    text-align: center;
-
-  }
-
-
-
-
+.container .address{
+  display: flex;
+  gap: 30px;
+}
 
 
   .logo{
@@ -59,12 +83,11 @@ body{
     color: #2e2f42;
   }
   
-  .nav:hover {
+  .nav:hover,
+  .nav:focus{
     color: #404bbf;
   }
-  .nav:focus {
-    color: #404bbf;
-  }
+ 
   .page-menu-list a{
     color: #2e2f42;
     font-weight: 500;
@@ -77,10 +100,7 @@ body{
   .page-menu-list li{
     list-style: none;
   }
-  .page-menu-list a:hover{
-    color: #404bbf;
-  }
-  
+  .page-menu-list a:hover,
   .page-menu-list a:focus{
     color: #404bbf;
   }
@@ -96,11 +116,8 @@ body{
   .contact-us li {
     list-style-type: none;
   }
-  .contact-us a:hover {
-    color: #404bbf;
-  }
-  
-  .contact-us a:focus {
+  .contact-us a:hover,
+  .contact-us a:focus{
     color: #404bbf;
   }
   
@@ -108,30 +125,43 @@ body{
     background-color: #2e2f42;
     text-align: center;
     color: #ffffff;
-    width: 1440px;
     height: 600px;
+    margin: 0 auto;
+    padding: 188px 0;
   }
   
   .effective h1 {
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 3.75em;
+    font-weight:700px;
+    font-size:56px;
+    line-height:1em;
     letter-spacing: 2%;
+    padding-bottom: 48px;
+    margin:0 auto;
+    max-width: 496px;
+    color: #FFFFFF;
   }
   
   .button-sec {
     background-color: #4D5AE5;
     color: #ffffff;
     cursor: pointer;
-    width:169px ;
+    min-width:169px ;
     height:56px ;
-  
+    border: none;
+    border-radius: 4px;  
+    display: block;
+    margin: 0 auto;
   }
-  .button-sec:hover {
+  .button-sec:hover,
+  .button-sec:focus{
     background-color:#404BBF;
   }
-  .button-sec:focus {
-    background-color:#404BBF;
+ 
+
+  .features-of-website{
+    display: flex;
+    flex-direction:row;
+    gap: 8px;
   }
   
   .features-of-website h3 {
@@ -161,6 +191,12 @@ body{
     background-color: #f4f4fd;
   }
   
+  .our-team-cardset{
+    display: flex;
+    flex-direction:row;
+    gap: 8px;
+  }
+
   .our-team h2 {
     text-align: center;
   }
@@ -178,6 +214,7 @@ body{
     font-size: 20px;
     line-height: 1.5em;
     letter-spacing: 2%;
+    text-align: center;
   }
   
   .our-team p {
@@ -186,16 +223,30 @@ body{
     line-height: 1.5em;
     letter-spacing: 2%;
     color: #434455;
+    text-align: center;
   }
-  
+  .our-team-item {
+    width: calc((100% - 72px) / 4);
+    list-style-type: none;
+    background-color: #ffffff;
+    border-radius: 0 0 4px 4px;
+
+  }
   .our-portfolio {
     font-weight: 700;
     font-size: 36px;
     line-height: 2.5em;
     letter-spacing: 2%;
     color: #2e2f42;
+    padding: 120px 0;
   }
-  
+  .our-portfolio-cardset{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    column-gap: 24px;
+    row-gap: 48px;  
+  }
   .our-portfolio h2 {
     text-align: center;
   }
@@ -223,9 +274,22 @@ body{
     letter-spacing: 2%;
     color: #434455;
   }
+
+  .border {
+    border: 1px;
+    border-color: #e7e9fc;
+    border-style: solid;
+    border-top: none;
+    height: 120px;
+    padding: 32px 16px;
+  
+  }
   
   .footer-sec {
-    background-color: #2e2f42;
+    background-color: #2E2F42;
+    color:#ffffff;
+    height: 312px;
+    padding: 100px 0;
   
   }
   .logo-2 {
@@ -234,6 +298,9 @@ body{
     font-size: 18px;
     line-height: 1.3125em;
     letter-spacing: 3%;
+    display: inline-block;
+    margin-bottom: 16px;
+    text-decoration: none;
   }
   
   .web-title {
@@ -247,5 +314,7 @@ body{
     font-size:16px;
     line-height:1.5em;
     letter-spacing: 2%;
+    max-width: 264px;
     color:#f4f4fd
+    
   }
